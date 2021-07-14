@@ -1,6 +1,9 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { Button, Container, Menu } from "semantic-ui-react";
 import ProfileSummary from "./ProfileSummary";
+
+import "../App.css";
 
 export default function Navi() {
   return (
@@ -17,7 +20,9 @@ export default function Navi() {
               <Button primary className="mr-3">
                 Giriş Yap
               </Button>
-              <Button primary>Kayıt Ol</Button>
+              <Button as={NavLink} to={`/register`} primary>
+                Kayıt Ol
+              </Button>
             </Menu.Item>
           </Menu.Menu>
         </Container>
